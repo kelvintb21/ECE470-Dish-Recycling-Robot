@@ -5,9 +5,12 @@ bowls from customer’s table and send to dishwasher to save human labor. The ro
 modes programmed in its system. The first is idle mode, which the robot stays in one position or
 patrol around waiting for commands. The second is working mode, which the robot will goes to
 one table and waiting for customers to put their tableware on robot arms, and then the robot will
-contain the dishes into its body automatically. Moreover, there are two ways to trigger the robot
-into working mode. The first is when customers finish their dishes and press a button to call the
-robot to come. The second is when customers wave their hands to stop the patrolling robot.
+contain the dishes into its body automatically. 
 
-Our robot dedicates to save human labor in the restaurant. This robot can also be used with dish
-serving robot at the same time.
+In both modes, the robot will remain constant speed and keep constant distance from others 
+when moving in designated lane. PID algorithm is applied to help achieve the constant speed and spacing.
+By recieving sensor installed on the robot, the program can know the present speed and distance from others,
+and gradually change to target speed and distance.
+
+By simulating the process, the robot can obtain optimal PID coefficients and optimal value function
+to help the algorithm reduce noises.
